@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fairyBeauty.mapper.MCustomerMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.fairyBeauty.entity.MCustomer">
+        <id column="customer_id" property="customerId" />
+        <result column="customer_name" property="customerName" />
+        <result column="customer_phone" property="customerPhone" />
+        <result column="customer_address" property="customerAddress" />
+        <result column="customer_companyname" property="customerCompanyname" />
+        <result column="customer_balance" property="customerBalance" />
+        <result column="customer_recharge_total" property="customerRechargeTotal" />
+        <result column="customer_recharge_last" property="customerRechargeLast" />
+        <result column="customer_age" property="customerAge" />
+        <result column="customer_hobby" property="customerHobby" />
+        <result column="customer_birthday" property="customerBirthday" />
+        <result column="memo" property="memo" />
+        <result column="update_time" property="updateTime" />
+        <result column="update_user_id" property="updateUserId" />
+        <result column="create_time" property="createTime" />
+        <result column="create_user_id" property="createUserId" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        customer_id, customer_name, customer_phone, customer_address, customer_companyname, customer_balance, customer_recharge_total, customer_recharge_last, customer_age, customer_hobby, customer_birthday, memo, update_time, update_user_id, create_time, create_user_id
+    </sql>
+
+</mapper>

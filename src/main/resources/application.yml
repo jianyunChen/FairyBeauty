@@ -1,0 +1,54 @@
+server:
+  servlet:
+    context-path: /fairy_beauty
+  tomcat:
+    uri-encoding: utf8
+
+spring:
+  profiles:
+    # 环境 dev|test|pro
+    active: '@spring.profiles.active@'
+  servlet.multipart.enabled: false
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+
+  datasource:
+    dynamic:
+      # 数据连接池配置
+      hikari:
+        connection-timeout: 30000
+        max-lifetime: 1800000
+        max-pool-size: 15
+        min-idle: 5
+        # mysql config
+        connection-test-query: select 1
+        pool-name: HYITHikariCP
+
+#  servlet:
+#    multipart:
+#      max-file-size: 2MB
+#  freemarker:
+#    template-loader-path: classpath:/static/
+
+#mybatis plus 设置
+mybatis-plus:
+  type-aliases-package: com.fairyBeauty.entity
+  mapper-locations: classpath:mapper/*.xml,classpath:mapper/**/*.xml
+  refresh-mapper: true
+  global-config:
+    # 关闭 mybatis-plus的 banner
+    # 是否控制台 print mybatis-plus 的 LOGO
+    banner: false
+    db-config:
+      #主键类型  AUTO:"数据库ID自增", NONE,INPUT:"用户输入ID",ID_WORKER:"全局唯一ID (数字类型唯一ID)",
+      # UUID:"全局唯一ID UUID",ID_WORKER_STR:"全局唯一ID (字符类型唯一ID)";
+      id-type: INPUT
+      #字段策略 ignored:"忽略判断",not_null:"非 NULL 判断"),not_empty:"非空判断"
+      field-strategy: not_empty
+      #逻辑删除配置
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+  configuration:
+    jdbc-type-for-null: null
+    map-underscore-to-camel-case: true
