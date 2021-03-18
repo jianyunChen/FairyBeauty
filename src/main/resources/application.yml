@@ -31,6 +31,15 @@ spring:
 #  freemarker:
 #    template-loader-path: classpath:/static/
 
+security:
+  basic:
+    enabled: true
+    path: /swagger-ui.html
+  user:
+    name: admin
+    password: admin
+
+
 #mybatis plus 设置
 mybatis-plus:
   type-aliases-package: com.fairyBeauty.entity

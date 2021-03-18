@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fairyBeauty.mapper.QPayrollMonthDetailsMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.fairyBeauty.entity.QPayrollMonthDetails">
+        <id column="user_id" property="userId" />
+        <result column="user_name" property="userName" />
+        <result column="total_amont" property="totalAmont" />
+        <result column="wages" property="wages" />
+        <result column="achievement" property="achievement" />
+        <result column="manual_cost" property="manualCost" />
+        <result column="service_count" property="serviceCount" />
+        <result column="service_count_old" property="serviceCountOld" />
+        <result column="service_count_new" property="serviceCountNew" />
+        <result column="sell_count_old" property="sellCountOld" />
+        <result column="sell_count_new" property="sellCountNew" />
+        <result column="sell_amount_old" property="sellAmountOld" />
+        <result column="sell_amount_new" property="sellAmountNew" />
+        <result column="memo" property="memo" />
+        <result column="update_time" property="updateTime" />
+        <result column="update_user_id" property="updateUserId" />
+        <result column="create_time" property="createTime" />
+        <result column="create_user_id" property="createUserId" />
+        <result column="q_date" property="qDate" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        user_id, user_name, total_amont, wages, achievement, manual_cost, service_count, service_count_old, service_count_new, sell_count_old, sell_count_new, sell_amount_old, sell_amount_new, memo, update_time, update_user_id, create_time, create_user_id, q_date
+    </sql>
+
+</mapper>
