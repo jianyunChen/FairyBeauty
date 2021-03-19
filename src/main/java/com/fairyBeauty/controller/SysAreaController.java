@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @since 2021-03-18
  */
 @RestController
-@RequestMapping("/nxgl/sys-area")
+@RequestMapping("/sys-area")
 public class SysAreaController {
 
 }

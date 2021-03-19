@@ -1,6 +1,7 @@
 package com.fairyBeauty.controller;
 
 
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import org.springframework.web.bind.annotation.RestController;
@@ -14,7 +15,11 @@ import org.springframework.web.bind.annotation.RestController;
  * @since 2021-03-18
  */
 @RestController
-@RequestMapping("/nxgl/m-menu")
+@RequestMapping("/menu")
 public class MMenuController {
 
+    @GetMapping("test")
+    public Object abc() {
+        return "123";
+    }
 }

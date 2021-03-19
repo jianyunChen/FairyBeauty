@@ -23,22 +23,13 @@ spring:
         min-idle: 5
         # mysql config
         connection-test-query: select 1
-        pool-name: HYITHikariCP
+        pool-name: FairyBeautyCP
 
-#  servlet:
-#    multipart:
-#      max-file-size: 2MB
-#  freemarker:
-#    template-loader-path: classpath:/static/
-
-security:
-  basic:
-    enabled: true
-    path: /swagger-ui.html
-  user:
-    name: admin
-    password: admin
-
+pagehelper:
+  helper-dialect: mysql
+  reasonable: false
+  support-methods-arguments: true
+  params: count=countSql
 
 #mybatis plus 设置
 mybatis-plus:
@@ -61,3 +52,4 @@ mybatis-plus:
   configuration:
     jdbc-type-for-null: null
     map-underscore-to-camel-case: true
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

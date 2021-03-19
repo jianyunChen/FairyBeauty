@@ -31,11 +31,15 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @Configuration
 @EnableSwagger2
 public class Swagger2Configuration {
+    /**
+     * 此处主要是API文档页面显示信息
+     */
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("应用接口文档")
-                .description("应用接口文档 1.0版本")
-                .version("1.0")
+                .title("应用接口文档") // 标题
+                .description("应用接口文档 1.0版本") // 描述
+                .termsOfServiceUrl("http://www.imooc.com") // 服务网址，一般写公司地址
+                .version("1.0") // 版本
                 .build();
     }
 
@@ -47,8 +51,10 @@ public class Swagger2Configuration {
                 //加了ApiOperation注解的类，才生成接口文档
                 .apis(RequestHandlerSelectors.withMethodAnnotation(ApiOperation.class))
                 //包下的类，才生成接口文档
-                .apis(RequestHandlerSelectors.basePackage("com.fairyBeauty.controller"))
+                .apis(RequestHandlerSelectors.basePackage("com"))
                 .paths(PathSelectors.any())
                 .build();
     }
+
+
 }

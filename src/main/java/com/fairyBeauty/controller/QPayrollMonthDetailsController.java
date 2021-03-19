@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @since 2021-03-18
  */
 @RestController
-@RequestMapping("/nxgl/q-payroll-month-details")
+@RequestMapping("/q-payroll-month-details")
 public class QPayrollMonthDetailsController {
 
 }

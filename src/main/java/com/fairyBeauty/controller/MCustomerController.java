@@ -3,11 +3,8 @@ package com.fairyBeauty.controller;
 
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * <p>
@@ -18,13 +15,22 @@ import org.springframework.web.bind.annotation.RestController;
  * @since 2021-03-18
  */
 @RestController
-@RequestMapping("/nxgl/m-customer")
+@RequestMapping("/customer")
 public class MCustomerController {
 
-    @ApiOperation(value = "m-customer接口", notes = "m-customer")
+    public MCustomerController(){
+        System.out.println("MCustomerController");
+    }
+    @RequestMapping("/test")
+    public String test(){
+        return "测试";
+    }
+
+
+    @ApiOperation(value = "客户信息接口", notes = "customer")
     @ApiImplicitParam(value = "姓名", name = "name", required = true, dataType = "String")
     @RequestMapping(value = "/{name}", method = RequestMethod.GET)
-    public String abc(@PathVariable String name) {
+    public String name(@PathVariable String name) {
         return name;
     }
 }

@@ -1,4 +1,4 @@
-package com.hyit.zhdw;
+package com.fairyBeauty;
 
 import com.fairyBeauty.utils.SpringContextUtil;
 import com.fasterxml.jackson.databind.ObjectMapper;

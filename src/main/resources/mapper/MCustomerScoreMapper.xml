@@ -15,11 +15,14 @@
         <result column="update_customer_id" property="updateCustomerId" />
         <result column="create_time" property="createTime" />
         <result column="create_customer_id" property="createCustomerId" />
+        <result column="is_delete" property="isDelete" />
+        <result column="delete_time" property="deleteTime" />
+        <result column="delete_user_id" property="deleteUserId" />
     </resultMap>
 
     <!-- 通用查询结果列 -->
     <sql id="Base_Column_List">
-        customer_id, customer_name, user_id, user_name, score, memo, update_time, update_customer_id, create_time, create_customer_id, id
+        customer_id, customer_name, user_id, user_name, score, memo, update_time, update_customer_id, create_time, create_customer_id, id, is_delete , delete_time , delete_user_id
     </sql>
 
 </mapper>

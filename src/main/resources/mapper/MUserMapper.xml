@@ -30,11 +30,14 @@
         <result column="province" property="province" />
         <result column="city" property="city" />
         <result column="county" property="county" />
+        <result column="is_delete" property="isDelete" />
+        <result column="delete_time" property="deleteTime" />
+        <result column="delete_user_id" property="deleteUserId" />
     </resultMap>
 
     <!-- 通用查询结果列 -->
     <sql id="Base_Column_List">
-        user_id, user_code, user_password, user_name, user_phone, user_home_address, user_age, user_hobby, user_birthday, memo, update_time, update_user_id, create_time, create_user_id, is_use, entry_time, recommender_id, recommender_name, user_cord, dormitory_address, position_id, position_name, company_id, province, city, county
+        user_id, user_code, user_password, user_name, user_phone, user_home_address, user_age, user_hobby, user_birthday, memo, update_time, update_user_id, create_time, create_user_id, is_use, entry_time, recommender_id, recommender_name, user_cord, dormitory_address, position_id, position_name, company_id, province, city, county, is_delete , delete_time , delete_user_id
     </sql>
 
 </mapper>
