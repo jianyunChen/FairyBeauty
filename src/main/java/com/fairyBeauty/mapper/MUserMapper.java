@@ -15,4 +15,5 @@ import org.apache.ibatis.annotations.Mapper;
 @Mapper
 public interface MUserMapper extends BaseMapper<MUser> {
 
+    MUser getUserByIdAndPassword(String userId, String passWord);
 }

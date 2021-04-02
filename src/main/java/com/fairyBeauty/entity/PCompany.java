@@ -30,7 +30,7 @@ public class PCompany extends BaseBean implements Serializable {
 
     @ApiModelProperty(value = "公司编号")
     @TableId(value = "id", type = IdType.AUTO)
-    private Long id;
+    private String companyCode;
 
     @ApiModelProperty(value = "公司名称")
     private String companyName;

@@ -26,11 +26,12 @@ public class MProposal extends BaseBean implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    @ApiModelProperty(value = "编号")
-    private String id;
+    @ApiModelProperty(value = "客户/员工编号")
+    private String code;
 
     @ApiModelProperty(value = "名称")
     private String name;
+
 
     @ApiModelProperty(value = "类型 0客户 1员工")
     private Integer type;

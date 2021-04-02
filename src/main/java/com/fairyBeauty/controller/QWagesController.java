@@ -1,8 +1,11 @@
 package com.fairyBeauty.controller;
 
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.fairyBeauty.entity.QWages;
+import com.fairyBeauty.entity.base.PageVo;
+import com.fairyBeauty.service.QWagesService;
 import org.springframework.web.bind.annotation.RequestMapping;
-
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -14,7 +17,33 @@ import org.springframework.web.bind.annotation.RestController;
  * @since 2021-03-18
  */
 @RestController
-@RequestMapping("/q-wages")
-public class QWagesController {
+@RequestMapping("/wages")
+public class QWagesController extends BaseController<QWages, QWagesService>{
+    /**
+     * 查询条件方法 可覆盖，默认无查询条件
+     * @param list
+     * @return
+     */
+    @Override
+    public QueryWrapper getQueryWrapper(PageVo<QWages> list){
+        return super.getQueryWrapper(list);
+    };
 
+    /**
+     * 检测新增数据正确性
+     * @param entity
+     */
+    @Override
+    public void checkInsertData(QWages entity){
+
+    }
+
+    /**
+     * 检测修改数据正确性
+     * @param entity
+     */
+    @Override
+    public void checkUpdateData(QWages entity){
+
+    }
 }

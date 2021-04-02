@@ -13,21 +13,23 @@ spring:
           username: chenjianyun
           password: '@chensee123'
           driver-class-name: com.mysql.cj.jdbc.Driver
-          url: jdbc:mysql://rm-bp1uz4wc60klopi915o.mysql.rds.aliyuncs.com:3306/fairybeauty?characterEncoding=UTF-8&useUnicode=true&useSSL=false&useTimezone=true&serverTimezone=GMT%2B8
+          url: jdbc:mysql://rm-bp1uz4wc60klopi915o.mysql.rds.aliyuncs.com:3306/fairybeauty?characterEncoding=UTF-8&useUnicode=true&useSSL=false&useTimezone=true&serverTimezone=GMT%2B8&allowMultiQueries=true
 
 #swagger:
 #  production: true
 
-#  redis:
-#    cluster:
-#      nodes: 172.30.83.101:7001,172.30.83.101:7002,172.30.83.101:7003
-#    password: hyit@zhny_redis
-#    lettuce:
-#      pool:
-#        max-active: 8
-#        max-wait: -1
-#        max-idle: 8
-#        min-idle: 0
+  redis:
+    cluster:
+      nodes: 127.0.0.1:6379
+    password: redis@123
+    lettuce:
+      pool:
+        max-active: 8
+        max-wait: -1
+        max-idle: 8
+        min-idle: 0
 
 #flag:
 #  isout: true
+
+domain: fairuBeauty

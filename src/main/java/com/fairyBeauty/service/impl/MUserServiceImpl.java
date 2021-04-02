@@ -17,4 +17,9 @@ import org.springframework.stereotype.Service;
 @Service
 public class MUserServiceImpl extends ServiceImpl<MUserMapper, MUser> implements MUserService {
 
+    @Override
+    public MUser getUserByUserIdAndPassword(String userId, String passWord) {
+        MUser user = baseMapper.getUserByIdAndPassword(userId,passWord);
+        return user;
+    }
 }

@@ -1,10 +1,12 @@
 package com.fairyBeauty.controller;
 
 
-import io.swagger.annotations.ApiImplicitParam;
-import io.swagger.annotations.ApiOperation;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.*;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.fairyBeauty.entity.MCustomer;
+import com.fairyBeauty.entity.base.PageVo;
+import com.fairyBeauty.service.MCustomerService;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  * <p>
@@ -16,21 +18,32 @@ import org.springframework.web.bind.annotation.*;
  */
 @RestController
 @RequestMapping("/customer")
-public class MCustomerController {
+public class MCustomerController extends BaseController<MCustomer, MCustomerService>{
+    /**
+     * 查询条件方法 可覆盖，默认无查询条件
+     * @param list
+     * @return
+     */
+    @Override
+    public QueryWrapper getQueryWrapper(PageVo<MCustomer> list){
+        return super.getQueryWrapper(list);
+    };
 
-    public MCustomerController(){
-        System.out.println("MCustomerController");
+    /**
+     * 检测新增数据正确性
+     * @param entity
+     */
+    @Override
+    public void checkInsertData(MCustomer entity){
+
     }
-    @RequestMapping("/test")
-    public String test(){
-        return "测试";
-    }
 
+    /**
+     * 检测修改数据正确性
+     * @param entity
+     */
+    @Override
+    public void checkUpdateData(MCustomer entity){
 
-    @ApiOperation(value = "客户信息接口", notes = "customer")
-    @ApiImplicitParam(value = "姓名", name = "name", required = true, dataType = "String")
-    @RequestMapping(value = "/{name}", method = RequestMethod.GET)
-    public String name(@PathVariable String name) {
-        return name;
     }
 }

@@ -27,7 +27,7 @@ public class MybatisPlusGenerator {
         // 项目名
         String moduleName = "";
         // 表名，多个英文逗号分割
-        String tableNames = "m_customer,m_customer_score,m_menu,m_position,m_proposal,m_role,m_role_menu,m_role_type,m_user,m_user_role,p_company,q_payroll_day_details,q_payroll_month_details,q_wages,sys_area";
+        String tableNames = "t_action";
         // 类名前缀
         String prefix = "";
         // 类名后缀

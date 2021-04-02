@@ -4,6 +4,7 @@
 
     <!-- 通用查询映射结果 -->
     <resultMap id="BaseResultMap" type="com.fairyBeauty.entity.QWages">
+        <id column="id" property="id" />
         <id column="user_id" property="userId" />
         <result column="user_name" property="userName" />
         <result column="wages" property="wages" />
@@ -22,7 +23,7 @@
 
     <!-- 通用查询结果列 -->
     <sql id="Base_Column_List">
-        user_id, user_name, wages, float_wages, memo, update_time, update_user_id, create_time, create_user_id, position_id, position_name, is_delete , delete_time , delete_user_id
+        id, user_id, user_name, wages, float_wages, memo, update_time, update_user_id, create_time, create_user_id, position_id, position_name, is_delete , delete_time , delete_user_id
     </sql>
 
 </mapper>

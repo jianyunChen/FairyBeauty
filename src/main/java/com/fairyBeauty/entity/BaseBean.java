@@ -1,5 +1,6 @@
 package com.fairyBeauty.entity;
 
+import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
@@ -14,24 +15,44 @@ import java.time.LocalDateTime;
  */
 @Data
 public class BaseBean implements Serializable {
+
+    @ApiModelProperty(value = "主键")
+    @TableId(value = "id", type = IdType.AUTO)
+    private Long id;
+
+    /**
+     * 更新时间
+     */
     @ApiModelProperty(value = "更新时间")
     private LocalDateTime updateTime = LocalDateTime.now();
-
+    /**
+     * 更新人
+     */
     @ApiModelProperty(value = "更新人")
     private String updateUserId = "";
-
+    /**
+     * 创建时间
+     */
     @ApiModelProperty(value = "创建时间")
     private LocalDateTime createTime = LocalDateTime.now();
-
+    /**
+     * 创建人
+     */
     @ApiModelProperty(value = "创建人")
     private String createUserId = "";
-
+    /**
+     * 是否删除
+     */
     @ApiModelProperty(value = "是否删除")
     private Boolean isDelete = false;
-
+    /**
+     * 删除时间
+     */
     @ApiModelProperty(value = "删除时间")
     private LocalDateTime deleteTime;
-
+    /**
+     * 删除人
+     */
     @ApiModelProperty(value = "删除人")
     private String deleteUserId;
 }

@@ -5,6 +5,7 @@
     <!-- 通用查询映射结果 -->
     <resultMap id="BaseResultMap" type="com.fairyBeauty.entity.MPosition">
         <id column="id" property="id" />
+        <id column="code" property="code" />
         <result column="name" property="name" />
         <result column="grade" property="grade" />
         <result column="memo" property="memo" />
@@ -19,7 +20,7 @@
 
     <!-- 通用查询结果列 -->
     <sql id="Base_Column_List">
-        id, name, grade, memo, update_time, update_user_id, create_time, create_user_id, is_delete , delete_time , delete_user_id
+        id,code, name, grade, memo, update_time, update_user_id, create_time, create_user_id, is_delete , delete_time , delete_user_id
     </sql>
 
 </mapper>

@@ -27,7 +27,7 @@ public class MRoleType extends BaseBean implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @ApiModelProperty(value = "角色类型编号")
-    private String id;
+    private String roleType;
 
     @ApiModelProperty(value = "角色类型名称")
     private String name;

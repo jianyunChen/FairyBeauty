@@ -2,6 +2,7 @@ package com.fairyBeauty.mapper;
 
 import com.fairyBeauty.entity.MCustomer;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.fairyBeauty.service.impl.MCustomerScoreServiceImpl;
 import org.apache.ibatis.annotations.Mapper;
 
 /**

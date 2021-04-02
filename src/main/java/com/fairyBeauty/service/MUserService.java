@@ -1,7 +1,6 @@
 package com.fairyBeauty.service;
 
 import com.fairyBeauty.entity.MUser;
-import com.baomidou.mybatisplus.extension.service.IService;
 
 /**
  * <p>
@@ -11,6 +10,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * @author chenjianyun
  * @since 2021-03-18
  */
-public interface MUserService extends IService<MUser> {
+public interface MUserService extends IBaseService<MUser> {
 
+    MUser getUserByUserIdAndPassword(String userId, String passWord);
 }

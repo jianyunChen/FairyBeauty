@@ -27,7 +27,7 @@ public class MPosition extends BaseBean implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @ApiModelProperty(value = "编号")
-    private String id;
+    private String code;
 
     @ApiModelProperty(value = "职位名称")
     private String name;

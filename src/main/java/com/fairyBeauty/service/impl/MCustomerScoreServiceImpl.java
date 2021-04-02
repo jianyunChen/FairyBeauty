@@ -1,9 +1,9 @@
 package com.fairyBeauty.service.impl;
 
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.fairyBeauty.entity.MCustomerScore;
 import com.fairyBeauty.mapper.MCustomerScoreMapper;
 import com.fairyBeauty.service.MCustomerScoreService;
-import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 
 /**

@@ -8,11 +8,18 @@
         <result column="area_name" property="areaName" />
         <result column="parent_area_id" property="parentAreaId" />
         <result column="parent_area_name" property="parentAreaName" />
+        <result column="update_time" property="updateTime" />
+        <result column="update_user_id" property="updateUserId" />
+        <result column="create_time" property="createTime" />
+        <result column="create_user_id" property="createUserId" />
+        <result column="is_delete" property="isDelete" />
+        <result column="delete_time" property="deleteTime" />
+        <result column="delete_user_id" property="deleteUserId" />
     </resultMap>
 
     <!-- 通用查询结果列 -->
     <sql id="Base_Column_List">
-        area_id, area_name, parent_area_id, parent_area_name
+        id, area_id, area_name, parent_area_id, parent_area_name, update_time, update_user_id, create_time, create_user_id, is_delete , delete_time , delete_user_id
     </sql>
 
 </mapper>

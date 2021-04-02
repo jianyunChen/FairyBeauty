@@ -4,6 +4,7 @@
 
     <!-- 通用查询映射结果 -->
     <resultMap id="BaseResultMap" type="com.fairyBeauty.entity.QPayrollDayDetails">
+        <id column="id" property="id" />
         <id column="user_id" property="userId" />
         <result column="user_name" property="userName" />
         <result column="achievement" property="achievement" />
@@ -28,7 +29,7 @@
 
     <!-- 通用查询结果列 -->
     <sql id="Base_Column_List">
-        user_id, user_name, achievement, manual_cost, service_count, service_count_old, service_count_new, sell_count_old, sell_count_new, sell_amount_old, sell_amount_new, memo, update_time, update_user_id, create_time, create_user_id, q_date, is_delete , delete_time , delete_user_id
+        id, user_id, user_name, achievement, manual_cost, service_count, service_count_old, service_count_new, sell_count_old, sell_count_new, sell_amount_old, sell_amount_new, memo, update_time, update_user_id, create_time, create_user_id, q_date, is_delete , delete_time , delete_user_id
     </sql>
 
 </mapper>

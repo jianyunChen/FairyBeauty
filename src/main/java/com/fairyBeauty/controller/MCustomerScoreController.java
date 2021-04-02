@@ -1,9 +1,11 @@
 package com.fairyBeauty.controller;
 
 
-import org.springframework.web.bind.annotation.GetMapping;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.fairyBeauty.entity.MCustomerScore;
+import com.fairyBeauty.entity.base.PageVo;
+import com.fairyBeauty.service.MCustomerScoreService;
 import org.springframework.web.bind.annotation.RequestMapping;
-
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -15,11 +17,33 @@ import org.springframework.web.bind.annotation.RestController;
  * @since 2021-03-18
  */
 @RestController
-@RequestMapping("/customer-score")
-public class MCustomerScoreController {
+@RequestMapping("/customer_score")
+public class MCustomerScoreController extends BaseController<MCustomerScore, MCustomerScoreService>{
+    /**
+     * 查询条件方法 可覆盖，默认无查询条件
+     * @param list
+     * @return
+     */
+    @Override
+    public QueryWrapper getQueryWrapper(PageVo<MCustomerScore> list){
+        return super.getQueryWrapper(list);
+    };
 
-    @GetMapping("test")
-    public Object abc() {
-        return "123";
+    /**
+     * 检测新增数据正确性
+     * @param entity
+     */
+    @Override
+    public void checkInsertData(MCustomerScore entity){
+
+    }
+
+    /**
+     * 检测修改数据正确性
+     * @param entity
+     */
+    @Override
+    public void checkUpdateData(MCustomerScore entity){
+
     }
 }

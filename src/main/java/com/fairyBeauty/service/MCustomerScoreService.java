@@ -1,7 +1,7 @@
 package com.fairyBeauty.service;
 
-import com.fairyBeauty.entity.MCustomerScore;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.fairyBeauty.entity.MCustomerScore;
 
 /**
  * <p>

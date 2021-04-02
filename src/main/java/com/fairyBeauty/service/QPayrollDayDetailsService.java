@@ -11,6 +11,6 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * @author chenjianyun
  * @since 2021-03-18
  */
-public interface QPayrollDayDetailsService extends IService<QPayrollDayDetails> {
+public interface QPayrollDayDetailsService extends IBaseService<QPayrollDayDetails> {
 
 }

@@ -5,6 +5,7 @@
     <!-- 通用查询映射结果 -->
     <resultMap id="BaseResultMap" type="com.fairyBeauty.entity.PCompany">
         <id column="id" property="id" />
+        <id column="company_code" property="companyCode" />
         <result column="company_name" property="companyName" />
         <result column="company_phone" property="companyPhone" />
         <result column="company_address" property="companyAddress" />
@@ -20,7 +21,7 @@
 
     <!-- 通用查询结果列 -->
     <sql id="Base_Column_List">
-        id, company_name, company_phone, company_address, memo, update_time, update_user_id, create_time, create_user_id, is_delete , delete_time , delete_user_id
+        id, company_code, company_name, company_phone, company_address, memo, update_time, update_user_id, create_time, create_user_id, is_delete , delete_time , delete_user_id
     </sql>
 
 </mapper>

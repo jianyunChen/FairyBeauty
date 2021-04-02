@@ -21,7 +21,7 @@ import lombok.experimental.Accessors;
 @Accessors(chain = true)
 @TableName("sys_area")
 @ApiModel(value="SysArea对象", description="区域信息表")
-public class SysArea implements Serializable {
+public class SysArea extends BaseBean implements Serializable {
 
     private static final long serialVersionUID = 1L;
 

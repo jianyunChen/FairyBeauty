@@ -4,6 +4,7 @@
 
     <!-- 通用查询映射结果 -->
     <resultMap id="BaseResultMap" type="com.fairyBeauty.entity.MRole">
+        <id column="id" property="id" />
         <id column="role_id" property="roleId" />
         <result column="role_name" property="roleName" />
         <result column="role_type" property="roleType" />
@@ -21,7 +22,7 @@
 
     <!-- 通用查询结果列 -->
     <sql id="Base_Column_List">
-        role_id, role_name, role_type, role_parent_id, role_is_used, memo, update_time, update_user_id, create_time, create_user_id, is_delete , delete_time , delete_user_id
+       id,  role_id, role_name, role_type, role_parent_id, role_is_used, memo, update_time, update_user_id, create_time, create_user_id, is_delete , delete_time , delete_user_id
     </sql>
 
 </mapper>
