@@ -1,7 +1,5 @@
 package com.fairyBeauty.entity;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableId;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
@@ -15,11 +13,11 @@ import java.time.LocalDateTime;
  */
 @Data
 public class BaseBean implements Serializable {
-
+    /**
+     * 更新时间
+     */
     @ApiModelProperty(value = "主键")
-    @TableId(value = "id", type = IdType.AUTO)
     private Long id;
-
     /**
      * 更新时间
      */

@@ -1,13 +1,13 @@
 package com.fairyBeauty.entity;
 
 import com.baomidou.mybatisplus.annotation.TableName;
-import java.time.LocalDateTime;
-import java.io.Serializable;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
+
+import java.io.Serializable;
 
 /**
  * <p>
@@ -42,10 +42,10 @@ public class MMenu extends BaseBean implements Serializable {
     private String menuParentId;
 
     @ApiModelProperty(value = "是否显示")
-    private String menuIsShow;
+    private int menuIsShow;
 
     @ApiModelProperty(value = "是否有效")
-    private String menuIsUsed;
+    private int menuIsUsed;
 
     @ApiModelProperty(value = "备注")
     private String memo;

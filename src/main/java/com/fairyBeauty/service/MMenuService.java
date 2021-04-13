@@ -1,7 +1,9 @@
 package com.fairyBeauty.service;
 
-import com.fairyBeauty.entity.MMenu;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.fairyBeauty.entity.MMenu;
+
+import java.util.List;
 
 /**
  * <p>
@@ -11,6 +13,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * @author chenjianyun
  * @since 2021-03-18
  */
-public interface MMenuService extends IBaseService<MMenu> {
+public interface MMenuService extends IService<MMenu> {
 
+    List<MMenu> getMenusByRoleIds(List<String> roles);
 }

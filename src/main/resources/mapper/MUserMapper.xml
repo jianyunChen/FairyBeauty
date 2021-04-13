@@ -27,7 +27,7 @@
         <result column="dormitory_address" property="dormitoryAddress" />
         <result column="position_id" property="positionId" />
         <result column="position_name" property="positionName" />
-        <result column="company_id" property="companyId" />
+        <result column="company_code" property="companyCode" />
         <result column="province" property="province" />
         <result column="city" property="city" />
         <result column="county" property="county" />
@@ -38,12 +38,17 @@
 
     <!-- 通用查询结果列 -->
     <sql id="Base_Column_List">
-        id, user_id, user_code, user_password, user_name, user_phone, user_home_address, user_age, user_hobby, user_birthday, memo, update_time, update_user_id, create_time, create_user_id, is_use, entry_time, recommender_id, recommender_name, user_cord, dormitory_address, position_id, position_name, company_id, province, city, county, is_delete , delete_time , delete_user_id
+         id, user_id, user_code,  user_name, user_phone, user_home_address, user_age, user_hobby, user_birthday, memo, update_time, update_user_id, create_time, create_user_id, is_use, entry_time, recommender_id, recommender_name, user_cord, dormitory_address, position_id, position_name, company_code, province, city, county, is_delete , delete_time , delete_user_id
     </sql>
     <select id="getUserByIdAndPassword" resultType="com.fairyBeauty.entity.MUser">
         SELECT  <include refid="Base_Column_List"></include>
         FROM m_user
         WHERE user_id = #{userId} and  user_password = #{passWord}
+    </select>
+    <select id="getUserByUserId" resultType="com.fairyBeauty.entity.MUser">
+        SELECT  <include refid="Base_Column_List"></include>
+        FROM m_user
+        WHERE user_id = #{userId}
     </select>
 
 </mapper>

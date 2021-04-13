@@ -15,13 +15,19 @@ spring:
           driver-class-name: com.mysql.cj.jdbc.Driver
           url: jdbc:mysql://rm-bp1uz4wc60klopi915o.mysql.rds.aliyuncs.com:3306/fairybeauty?characterEncoding=UTF-8&useUnicode=true&useSSL=false&useTimezone=true&serverTimezone=GMT%2B8&allowMultiQueries=true
 
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
 #swagger:
 #  production: true
 
   redis:
     cluster:
       nodes: 127.0.0.1:6379
-    password: redis@123
+#    password: redis@123
+    keySerializer: org.springframework.data.redis.serializer.StringRedisSerializer
+    valueSerializer: org.springframework.data.redis.serializer.StringRedisSerializer
     lettuce:
       pool:
         max-active: 8
@@ -31,5 +37,7 @@ spring:
 
 #flag:
 #  isout: true
-
+checkLogin: false
 domain: fairuBeauty
+# 登陆缓存时间 单位天
+loginTime: 3

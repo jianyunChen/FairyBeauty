@@ -49,6 +49,7 @@ mybatis-plus:
       #逻辑删除配置
       logic-delete-value: 1
       logic-not-delete-value: 0
+      logic-delete-field: isDelete
   configuration:
     jdbc-type-for-null: null
     map-underscore-to-camel-case: true

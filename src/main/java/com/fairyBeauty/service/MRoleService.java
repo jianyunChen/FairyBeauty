@@ -1,7 +1,9 @@
 package com.fairyBeauty.service;
 
-import com.fairyBeauty.entity.MRole;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.fairyBeauty.entity.MRole;
+
+import java.util.List;
 
 /**
  * <p>
@@ -11,6 +13,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * @author chenjianyun
  * @since 2021-03-18
  */
-public interface MRoleService extends IBaseService<MRole> {
+public interface MRoleService extends IService<MRole> {
 
+    List<MRole> getRoleListByUserRole(List<String> userRoles);
 }

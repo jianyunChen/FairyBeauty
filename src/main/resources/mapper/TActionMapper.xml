@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fairyBeauty.mapper.TActionMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.fairyBeauty.entity.TAction">
+        <id column="id" property="id" />
+        <result column="modular_type" property="modularType" />
+        <result column="action_name" property="actionName" />
+        <result column="action_type" property="actionType" />
+        <result column="action_type_name" property="actionTypeName" />
+        <result column="action_time" property="actionTime" />
+        <result column="action_user_id" property="actionUserId" />
+        <result column="action_user_name" property="actionUserName" />
+        <result column="action_time_consuming" property="actionTimeConsuming" />
+        <result column="message" property="message" />
+        <result column="ip" property="ip" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, modular_type, action_name, action_type, action_type_name, action_time, action_user_id, action_user_name, action_time_consuming, message, ip
+    </sql>
+
+</mapper>

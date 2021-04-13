@@ -1,18 +1,18 @@
 package com.fairyBeauty.mapper;
 
+import com.fairyBeauty.entity.TAction;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.fairyBeauty.entity.MMenu;
 import org.apache.ibatis.annotations.Mapper;
 
 /**
  * <p>
- * 菜单表 Mapper 接口
+ *  Mapper 接口
  * </p>
  *
- * @author chenjianyun
- * @since 2021-03-18
+ * @author s
+ * @since 2021-04-02
  */
 @Mapper
-public interface MMenuMapper extends BaseMapper<MMenu> {
-    
+public interface TActionMapper extends BaseMapper<TAction> {
+
 }

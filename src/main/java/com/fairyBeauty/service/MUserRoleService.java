@@ -1,7 +1,9 @@
 package com.fairyBeauty.service;
 
-import com.fairyBeauty.entity.MUserRole;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.fairyBeauty.entity.MUserRole;
+
+import java.util.List;
 
 /**
  * <p>
@@ -11,6 +13,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * @author chenjianyun
  * @since 2021-03-18
  */
-public interface MUserRoleService extends IBaseService<MUserRole> {
+public interface MUserRoleService extends IService<MUserRole> {
 
+    List<MUserRole> getUserRolesByUserId(String userId);
 }

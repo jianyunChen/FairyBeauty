@@ -65,6 +65,13 @@ public class BasicUtil {
         return decodeStr;
     }
 
-    private static String KEY_MD5 = "failybeauty2021";
+
+
+    public static void main(String[] args) {
+        String s =  base64("admin");
+        System.out.println(s);
+        String s1 =  encodedBase64(s);
+        System.out.println(s1);
+    }
 
 }

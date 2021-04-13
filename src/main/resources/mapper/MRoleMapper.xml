@@ -24,5 +24,14 @@
     <sql id="Base_Column_List">
        id,  role_id, role_name, role_type, role_parent_id, role_is_used, memo, update_time, update_user_id, create_time, create_user_id, is_delete , delete_time , delete_user_id
     </sql>
+    <select id="getRoleListByUserRole" resultType="com.fairyBeauty.entity.MRole">
+        select role_id, role_name from m_role where 1=1
+        <if test="userRoles != null">
+            and role_id in
+            <foreach collection="userRoles" separator="," index="item" open="(" close=")" item="item">
+                #{item}
+            </foreach>
+        </if>
+    </select>
 
 </mapper>

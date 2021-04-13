@@ -1,8 +1,10 @@
 package com.fairyBeauty.mapper;
 
-import com.fairyBeauty.entity.MRole;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.fairyBeauty.entity.MRole;
 import org.apache.ibatis.annotations.Mapper;
+
+import java.util.List;
 
 /**
  * <p>
@@ -15,4 +17,5 @@ import org.apache.ibatis.annotations.Mapper;
 @Mapper
 public interface MRoleMapper extends BaseMapper<MRole> {
 
+    List<MRole> getRoleListByUserRole(List<String> userRoles);
 }

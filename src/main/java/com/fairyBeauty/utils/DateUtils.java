@@ -83,6 +83,15 @@ public class DateUtils {
     }
 
     /**
+     * 将long类型的timestamp转为LocalDateTime
+     * @param timestamp
+     * @return
+     */
+    public static String getDateTimeStringOfTimestamp(long timestamp) {
+        return getDateTimeAsString(getDateTimeOfTimestamp(timestamp));
+    }
+
+    /**
      * 将LocalDateTime转为long类型的timestamp
      * @param localDateTime
      * @return

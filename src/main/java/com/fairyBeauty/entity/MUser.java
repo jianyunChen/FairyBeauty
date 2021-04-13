@@ -1,13 +1,14 @@
 package com.fairyBeauty.entity;
 
 import com.baomidou.mybatisplus.annotation.TableName;
-import java.time.LocalDateTime;
-import java.io.Serializable;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
+
+import java.io.Serializable;
+import java.time.LocalDateTime;
 
 /**
  * <p>
@@ -81,7 +82,7 @@ public class MUser extends BaseBean implements Serializable {
     private String positionName;
 
     @ApiModelProperty(value = "公司编号")
-    private Integer companyId;
+    private String companyCode;
 
     @ApiModelProperty(value = "省")
     private String province;
